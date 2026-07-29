@@ -12,15 +12,15 @@ You can perform **at most one trade** to maximize the number of active sections 
 * Convert a contiguous block of <code>'1'</code>s that is surrounded by <code>'0'</code>s to all <code>'0'</code>s.
 * Afterward, convert a contiguous block of <code>'0'</code>s that is surrounded by <code>'1'</code>s to all <code>'1'</code>s.  
 
-Additionally, you are given a **2D array** <code>queries</code>, where <code>queries[i] = [li, ri]</code> represents a substring <code>s[li...ri]</code>.
+Additionally, you are given a **2D array** <code>queries</code>, where <code>queries[i] = [l<sub>i</sub>, r<sub>i</sub>]</code> represents a substring <code>s[l<sub>i</sub>...r<sub>i</sub>]</code>.
 
-For each query, determine the **maximum** possible number of active sections in <code>s</code> after making the optimal trade on the substring <code>s[li...ri]</code>.
+For each query, determine the **maximum** possible number of active sections in <code>s</code> after making the optimal trade on the substring <code>s[l<sub>i</sub>...r<sub>i</sub>]</code>.
 
 Return an array <code>answer</code>, where <code>answer[i]</code> is the result for <code>queries[i]</code>.
 
 **Note**
 
-* For each query, treat <code>s[li...ri]</code> as if it is **augmented** with a <code>'1'</code> at both ends, forming <code>t = '1' + s[li...ri] + '1'</code>. The augmented <code>'1'</code>s **do not** contribute to the final count.
+* For each query, treat <code>s[l<sub>i</sub>...r<sub>i</sub>]</code> as if it is **augmented** with a <code>'1'</code> at both ends, forming <code>t = '1' + s[l<sub>i</sub>...r<sub>i</sub>] + '1'</code>. The augmented <code>'1'</code>s **do not** contribute to the final count.
 * The queries are independent of each other.  
   
 <br />
