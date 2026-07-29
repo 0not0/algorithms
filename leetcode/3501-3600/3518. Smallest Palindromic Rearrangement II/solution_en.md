@@ -27,8 +27,8 @@ Return the **k-th** **lexicographically smallest** palindromic **permutation** o
 
 **Explanation:**
 
-* There is only one palindromic rearrangement: "aa".
-* The output is an empty string since k = 2 exceeds the number of possible rearrangements.  
+* There is only one palindromic rearrangement: <code>"aa"</code>.
+* The output is an empty string since <code>k = 2</code> exceeds the number of possible rearrangements.  
 
 **Example 3:**
 <pre>
@@ -40,6 +40,16 @@ Return the **k-th** **lexicographically smallest** palindromic **permutation** o
 
 * The two distinct palindromic rearrangements of <code>"bacab"</code> are <code>"abcba"</code> and <code>"bacab"</code>.
 * Lexicographically, <code>"abcba"</code> comes before <code>"bacab"</code>. Since <code>k = 1</code>, the output is <code>"abcba"</code>.
+
+<br/>
+
+**Constraints:**
+
+* <code>1 <= s.length <= 10<sup>4</sup></code>
+* <code>s</code> consists of lowercase English letters.
+* <code>s</code> is guaranteed to be palindromic.
+* <code>1 <= k <= 10<sup>6</sup></code>  
+<br />
 
 ***
 
