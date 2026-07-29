@@ -2,6 +2,45 @@
 
 <code>Hard</code> level
 
+You are given a **palindromic** string <code>s</code> and an integer <code>k</code>.
+
+Return the **k-th** **lexicographically smallest** palindromic **permutation** of <code>s</code>. If there are fewer than <code>k</code> distinct palindromic permutations, return an empty string.
+
+**Note**: Different rearrangements that yield the same palindromic string are considered identical and are counted once.
+
+**Example 1:**
+<pre>
+<strong>Input:</strong> s = "abba", k = 2
+<strong>Output:</strong> "baab"
+</pre>  
+
+**Explanation:**
+
+* The two distinct palindromic rearrangements of <code>"abba"</code> are <code>"abba"</code> and <code>"baab"</code>.
+* Lexicographically, <code>"abba"</code> comes before <code>"baab"</code>. Since <code>k = 2</code>, the output is <code>"baab"</code>.
+
+**Example 2:**
+<pre>
+<strong>Input:</strong> s = "aa", k = 2
+<strong>Output:</strong> ""
+</pre>
+
+**Explanation:**
+
+* There is only one palindromic rearrangement: "aa".
+* The output is an empty string since k = 2 exceeds the number of possible rearrangements.  
+
+**Example 3:**
+<pre>
+<strong>Input:</strong> s = "bacab", k = 1
+<strong>Output:</strong> "abcba"
+</pre>  
+
+**Explanation:**
+
+* The two distinct palindromic rearrangements of <code>"bacab"</code> are <code>"abcba"</code> and <code>"bacab"</code>.
+* Lexicographically, <code>"abcba"</code> comes before <code>"bacab"</code>. Since <code>k = 1</code>, the output is <code>"abcba"</code>.
+
 ***
 
 ### Solution
