@@ -43,3 +43,45 @@ The maximum digit range is 9. Both integers have this digit range, so the answer
 + <code>1 <= nums.length <= 100</code>
 + <code>10 <= nums[i] <= 10<sup>5</sup></code> 
 
+<br />
+
+***  
+
+### Solution  
+
+**Time complexity:**  <code>O(n)</code>  
+**Space complexity:**  <code>O(1)</code>  
+
+**C++**
+```C++
+class Solution {
+public:
+    int maxDigitRange(vector<int>& nums) {
+      int mx = 0;
+      int ans = 0;
+        
+      for (int x : nums) {
+        int a = 10;
+        int b = 0;
+
+        for (int y = x; y > 0; y /= 10) {
+          int c = y % 10;
+
+          a = min(a, c);
+          b = max(b, c);
+        }
+
+      int d = b - a;
+
+      if (mx < d) {
+        mx = d;
+        ans = x;
+      } else if (mx == d) {
+        ans += x;
+      }
+    }
+
+    return ans;
+  }
+};
+```
