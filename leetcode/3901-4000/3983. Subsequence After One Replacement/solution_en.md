@@ -35,5 +35,36 @@ Return <code>true</code> if it is possible to make <code>s</code> a <strong>subs
 * <code>1 <= s.length, t.length <= 10<sup>5</sup></code>
 * <code>s</code> and <code>t</code> consist only of lowercase English letters.
 
+<br />
 
+***  
 
+### Solution  
+
+**Time complexity:**  <code>O(n)</code>  
+**Space complexity:**  <code>O(1)</code>  
+
+**C++**
+```C++
+class Solution {
+public:
+  bool canMakeSubsequence(string s, string t) {
+    int without = 0;
+    int with = 0;
+
+    for (char c : t) {
+      if (with < s.size() && s[with] == c) with++;
+
+      if (without < s.size()) {
+        with = max(with, without + 1);
+
+        if (s[without] == c) {
+          without++;
+        }
+      }
+    }
+
+    return max(without, with) == s.size();
+  }
+};
+```
