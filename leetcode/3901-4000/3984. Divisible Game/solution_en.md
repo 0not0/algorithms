@@ -67,3 +67,76 @@ Return the **product** of the **maximum** score difference and the chosen value 
 * <code>1 <= nums.length <= 1000</code>
 * <code>1 <= nums[i] <= 10<sup>6</sup></code>  
 
+<br />
+
+***  
+
+### Solution  
+
+**Time complexity:**  <code>O(n$\sqrt {M}$ + Dn)</code>  
+**Space complexity:**  <code>O(D)</code>  
+**where**:  
+<code>M = max(nums)</code>  
+<code> D </code> - number of different candidates <code>k</code>  
+<code> n </code> - array size   
+
+The algorithm consists of two phases:  
+**1.** Collect all possible <code>k</code>: <code>O(n$\sqrt {M}$)</code>  
+**2.** For each <code>k</code>, we traverse the array once: <code>O(Dn)</code>
+
+
+**C++**
+```C++
+class Solution {
+public:
+  int divisibleGame(vector<int>& nums)
+  {
+    const long long MOD = 1e9 + 7;
+    long long bestDiff = LLONG_MIN;
+    int bestK = INT_MAX;
+
+    unordered_set<int> ks;
+    ks.insert(2);
+
+    for (int x : nums)
+    {
+      for (int d = 2; 1LL * d * d <= x; ++d)
+      {
+        if (x % d == 0)
+        {
+          ks.insert(d);
+          ks.insert(x / d);
+        }
+      }
+
+      if (x > 1) ks.insert(x);
+    }
+
+    for (int k : ks)
+    {
+      long long cur = 0;
+      long long best = LLONG_MIN;
+
+      for (int x : nums)
+      {
+        long long val = (x % k == 0) ? x : -x;
+
+        cur = max(val, cur + val);
+        best = max(best, cur);
+      }
+
+      if (best > bestDiff || (best == bestDiff && k < bestK))
+      {
+        bestDiff = best;
+        bestK = k;
+      }
+    }
+
+    long long ans = (bestDiff % MOD) * bestK % MOD;
+
+    if (ans < 0) ans += MOD;
+
+    return ans;
+  }
+};
+```
