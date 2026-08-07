@@ -73,7 +73,7 @@ Return the **product** of the **maximum** score difference and the chosen value 
 
 ### Solution  
 
-**Time complexity:**  <code>O(n$\sqrt {M}$ + Dn)</code>  
+**Time complexity:**  <code>O(n * sqrt(M) + D * n)</code>  
 **Space complexity:**  <code>O(D)</code>  
 **where**:  
 <code>M = max(nums)</code>  
@@ -81,8 +81,8 @@ Return the **product** of the **maximum** score difference and the chosen value 
 <code> n </code> - array size   
 
 The algorithm consists of two phases:  
-**1.** Collect all possible <code>k</code>: <code>O(n$\sqrt {M}$)</code>  
-**2.** For each <code>k</code>, we traverse the array once: <code>O(Dn)</code>
+**1.** Collect all possible <code>k</code>: <code>O(n * sqrt(M))</code>  
+**2.** For each <code>k</code>, we traverse the array once: <code>O(D * n)</code>
 
 
 **C++**
