@@ -1,3 +1,55 @@
+# [3348. Smallest Divisible Digit Product II](https://leetcode.com/problems/smallest-divisible-digit-product-ii/)  
+
+<code>Hard</code> level
+
+You are given a string <code>num</code> which represents a **positive** integer, and an integer <code>t</code>.
+
+A number is called **zero-free** if *none* of its digits are 0.
+
+Return a string representing the **smallest zero-free** number greater than or equal to <code>num</code> such that the **product of its digits** is divisible by <code>t</code>. If no such number exists, return <code>"-1"</code>.
+
+<br />
+
+**Example 1:**
+<pre>
+<strong>Input:</strong> num = "1234", t = 256
+<strong>Output:</strong> "1488"
+</pre>
+**Explanation:**
+
+The smallest zero-free number that is greater than 1234 and has the product of its digits divisible by 256 is 1488, with the product of its digits equal to 256.
+
+**Example 2:**
+<pre>
+<strong>Input:</strong> num = "12355", t = 50
+<strong>Output:</strong> "12355"
+</pre>
+**Explanation:**
+
+12355 is already zero-free and has the product of its digits divisible by 50, with the product of its digits equal to 150.
+
+**Example 3:**
+<pre>
+<strong>Input:</strong> num = "11111", t = 26
+<strong>Output:</strong> "-1"
+</pre>
+**Explanation:**
+
+No number greater than 11111 has the product of its digits divisible by 26.
+
+<br />
+
+**Constraints:**
+
+* <code>2 <= num.length <= 2 * 10<sup>5</sup></code>
+* <code>num</code> consists only of digits in the range <code>['0', '9']</code>.
+* <code>num</code> does not contain leading zeros.
+* <code>1 <= t <= 10<sup>14</sup></code>
+
+<br />
+
+***  
+
 ### Solution  
 
 **Time complexity:**  <code>O(n)</code>  
