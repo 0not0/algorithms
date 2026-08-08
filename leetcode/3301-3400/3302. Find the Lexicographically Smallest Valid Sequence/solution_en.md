@@ -24,9 +24,9 @@ class Solution
 
       int j = m - 1;
 
-      for (int i = n - 1; i >= 0 && j >= 0; i--) 
+      for(int i = n - 1; i >= 0 && j >= 0; i--) 
       {
-        if (word1[i] == word2[j]) 
+        if(word1[i] == word2[j]) 
         {
           suf[j] = i;
           j--;
@@ -37,15 +37,15 @@ class Solution
       j = 0;
       bool used = false;
 
-      while (i < n && j < m) 
+      while(i < n && j < m) 
       {
-        if (word1[i] == word2[j]) 
+        if(word1[i] == word2[j]) 
         {
           ans.push_back(i);
           i++;
           j++;
         } 
-        else if (!used && (j == m - 1 || suf[j + 1] > i)) 
+        else if(!used && (j == m - 1 || suf[j + 1] > i)) 
         {
           ans.push_back(i);
           used = true;
