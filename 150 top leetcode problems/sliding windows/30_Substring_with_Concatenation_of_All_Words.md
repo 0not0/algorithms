@@ -2,3 +2,65 @@
 
 **Hard** level  
 
+You are given a string <code>s</code> and an array of strings <code>words</code>. All the strings of <code>words</code> are of **the same length**.
+
+A **concatenated string** is a string that exactly contains all the strings of any permutation of <code>words</code> concatenated.
+
+* For example, if <code>words = ["ab","cd","ef"]</code>, then <code>"abcdef"</code>, <code>"abefcd"</code>, <code>"cdabef"</code>, <code>"cdefab"</code>, <code>"efabcd"</code>, and <code>"efcdab"</code> are all concatenated strings. <code>"acdbef"</code> is not a concatenated string because it is not the concatenation of any permutation of <code>words</code>.  
+  
+Return an array of *the starting indices* of all the concatenated substrings in <code>s</code>. You can return the answer in **any order**. 
+
+<br />
+
+**Example 1:**
+<pre>
+<strong>Input:</strong> s = "barfoothefoobarman", words = ["foo","bar"]
+<strong>Output:</strong> [0,9]
+</pre>
+**Explanation:**
+
+The substring starting at 0 is <code>"barfoo"</code>. It is the concatenation of <code>["bar","foo"]</code> which is a permutation of <code>words</code>.
+The substring starting at 9 is <code>"foobar"</code>. It is the concatenation of <code>["foo","bar"]</code> which is a permutation of <code>words</code>.
+
+**Example 2:**
+<pre>
+<strong>Input:</strong> s = "wordgoodgoodgoodbestword", words = ["word","good","best","word"]
+<strong>Output:</strong> []
+</pre>
+**Explanation:**
+
+There is no concatenated substring.
+
+**Example 3:**
+<pre>
+<strong>Input:</strong> s = "barfoofoobarthefoobarman", words = ["bar","foo","the"]
+<strong>Output:</strong> [6,9,12]
+</pre>
+**Explanation:**
+
+The substring starting at 6 is <code>"foobarthe"</code>. It is the concatenation of <code>["foo","bar","the"]</code>.
+The substring starting at 9 is <code>"barthefoo"</code>. It is the concatenation of <code>["bar","the","foo"]</code>.
+The substring starting at 12 is <code>"thefoobar"</code>. It is the concatenation of <code>["the","foo","bar"]</code>.
+
+<br />
+
+**Constraints:**
+
+* <code>1 <= s.length <= 10<sup>4</sup></code>
+* <code>1 <= words.length <= 5000</code>
+* <code>1 <= words[i].length <= 30</code>
+* <code>s</code> and <code>words[i]</code> consist of lowercase English letters.
+
+<br />
+
+***  
+
+**Solution**
+
+**Time complexity:**  
+**Space complexity:** 
+
+**C++**
+```C++
+
+```
