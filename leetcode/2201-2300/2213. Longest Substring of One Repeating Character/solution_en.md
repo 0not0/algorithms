@@ -6,8 +6,8 @@
 
 ### Solution  
 
-**Time complexity:**  <code>O(n)</code>  
-**Space complexity:**  <code>O(1)</code>   
+**Time complexity:**  <code>O(n + k * log n)</code>  
+**Space complexity:**  <code>O(n)</code>   
 
 **C++**  
 ```C++
