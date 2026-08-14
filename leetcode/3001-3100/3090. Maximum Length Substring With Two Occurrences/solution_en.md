@@ -2,6 +2,38 @@
 
 <code>Easy</code> level
 
+Given a string <code>s</code>, return the **maximum** length of a **substring**<sup>1</sup> such that it contains *at most two occurrences* of each character.  
+
+**1.** A **substring** is a contiguous sequence of characters within a string.
+
+<br />
+
+**Example 1:**
+<pre>
+<strong>Input:</strong> s = "bcbbbcba"
+<strong>Output:</strong> 4
+</pre>
+
+**Explanation:**
+
+The following substring has a length of 4 and contains at most two occurrences of each character: <code>"bcbbbcba"</code>.
+
+**Example 2:**
+<pre>
+<strong>Input:</strong> s = "aaaa"
+<strong>Output:</strong> 2
+</pre>
+
+**Explanation:**
+
+The following substring has a length of 2 and contains at most two occurrences of each character: <code>"aaaa"</code>.
+
+<br />
+
+**Constraints:**
+
+* <code>2 <= s.length <= 100</code>
+* <code>s</code> consists only of lowercase English letters.
 
 <br />
 
