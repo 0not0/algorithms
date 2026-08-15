@@ -79,6 +79,7 @@ One optimal way:
 <strong>Space complexity:</strong> <code>O(log n)</code>
 
 <strong>C++</strong>  
+
 ```C++
 class Solution {
 public:

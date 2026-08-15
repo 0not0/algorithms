@@ -53,6 +53,7 @@ Return the <strong>remaining</strong> occupied intervals in <strong>sorted</stro
 <strong>Space complexity:</strong> <code>O(n)</code>
 
 <strong>C++</strong>
+
 ```C++
 class Solution {
 public:

@@ -82,6 +82,7 @@ The total value is <code>4 + 3 = 7</code>.
 <strong>Space complexity:</strong> <code>O(n)</code>
 
 <strong>C++</strong>  
+
 ```C++
 class Solution {
 public:

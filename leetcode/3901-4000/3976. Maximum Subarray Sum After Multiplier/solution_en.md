@@ -51,6 +51,7 @@ Note that the subarray chosen for the operation and the subarray chosen for the 
 <strong>Space complexity:</strong> <code>O(1)</code>
 
 <strong>C++</strong>  
+
 ```C++
 #include <vector>
 #include <algorithm>
