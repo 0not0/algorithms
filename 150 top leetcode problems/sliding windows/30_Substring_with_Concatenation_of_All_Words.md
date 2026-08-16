@@ -57,10 +57,76 @@ The substring starting at 12 is <code>"thefoobar"</code>. It is the concatenatio
 
 **Solution**
 
-**Time complexity:**  
-**Space complexity:** 
+**Time complexity:** <code>O(n)</code>  
+**Space complexity:** <code>O(m)</code>  
+<code>m = words.size()</code>
 
 **C++**
 ```C++
+class Solution
+{
+  public:
+    vector<int> findSubstring(string s, vector<string>& words)
+    {
+      const int n = s.size();
+      const int wordsCount = words.size();
+      const int wordLength = words[0].size();
 
+      unordered_map<string, int> required;
+
+      for(const string& word : words) required[word]++;
+
+      vector<int> result;
+
+      for(int offset = 0; offset < wordLength; offset++)
+      {
+        int left = offset;
+        int right = offset;
+        int currentWords = 0;
+
+        unordered_map<string, int> window;
+
+        while(right + wordLength <= n)
+        {
+          string word = s.substr(right, wordLength);
+          right += wordLength;
+
+          if(!required.contains(word))
+          {
+            window.clear();
+            currentWords = 0;
+            left = right;
+
+            continue;
+          }
+
+          window[word]++;
+          currentWords++;
+
+          while(window[word] > required[word])
+          {
+            string leftWord = s.substr(left, wordLength);
+
+            window[leftWord]--;
+            currentWords--;
+
+            left += wordLength;
+          }
+
+          if(currentWords == wordsCount)
+          {
+            result.push_back(left);
+            string leftWord = s.substr(left, wordLength);
+
+            window[leftWord]--;
+            currentWords--;
+
+            left += wordLength;
+          }
+        }
+      }
+
+      return result;
+    }
+};
 ```
