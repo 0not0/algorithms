@@ -45,10 +45,32 @@ Given an array of positive integers <code>nums</code> and a positive integer <co
 
 **Solution**
 
-**Time complexity:**  
-**Space complexity:** 
+**Time complexity:** <code>O(n)</code>
+**Space complexity:** <code>O(1)</code>
 
 **C++**
 ```C++
+class Solution 
+{
+  public:
+    int minSubArrayLen(int target, vector<int>& nums)
+    {
+      int n = nums.size();
+      long long sum = 0;
+      int minLength = n + 1;
 
+      for(int end = 0, start = 0; end < n; end++)
+      {
+        sum += nums[end];
+
+        while(sum >= target)
+        {
+          minLength = min(minLength, end - start + 1);
+          sum -= nums[start++];
+        }
+      }
+
+      return minLength <= n ? minLength : 0;
+    }
+};
 ```
