@@ -49,10 +49,54 @@ Since the largest window of s only has one 'a', return empty string.
 
 **Solution**
 
-**Time complexity:**  
-**Space complexity:** 
+**Time complexity:**  <code>O(n)</code>
+**Space complexity:** <code>O(1)</code>
 
 **C++**
 ```C++
+class Solution 
+{
+  public:
+    string minWindow(string s, string t) {
+      int need[128] = {};
 
+      for(char c : t) need[c]++;
+       
+
+      int left = 0;
+      int required = t.size();
+
+      int minStart = 0;
+      int minLength = INT_MAX;
+
+        for (int right = 0; right < s.size(); right++)
+        {
+          char c = s[right];
+
+          if (need[c] > 0) required--;
+
+          need[c]--;
+
+          while(required == 0)
+          {
+            int length = right - left + 1;
+
+            if(length < minLength)
+            {
+              minLength = length;
+              minStart = left;
+            }
+
+            char leftChar = s[left];
+            need[leftChar]++;
+
+            if(need[leftChar] > 0) required++;
+
+            left++;
+          }
+        }
+
+      return minLength == INT_MAX ? "" : s.substr(minStart, minLength);
+    }
+};
 ```
