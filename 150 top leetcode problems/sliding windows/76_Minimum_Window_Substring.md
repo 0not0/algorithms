@@ -49,8 +49,8 @@ Since the largest window of s only has one 'a', return empty string.
 
 **Solution**
 
-**Time complexity:**  <code>O(n)</code>
-**Space complexity:** <code>O(1)</code>
+**Time complexity:**  <code>O(n)</code>  
+**Space complexity:** <code>O(1)</code>  
 
 **C++**
 ```C++

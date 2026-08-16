@@ -45,8 +45,8 @@ Given an array of positive integers <code>nums</code> and a positive integer <co
 
 **Solution**
 
-**Time complexity:** <code>O(n)</code>
-**Space complexity:** <code>O(1)</code>
+**Time complexity:** <code>O(n)</code>  
+**Space complexity:** <code>O(1)</code>  
 
 **C++**
 ```C++

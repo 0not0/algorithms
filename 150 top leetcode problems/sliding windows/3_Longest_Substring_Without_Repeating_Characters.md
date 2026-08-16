@@ -44,8 +44,8 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 
 **Solution**
 
-**Time complexity:**  <code>O(n)</code>
-**Space complexity:** <code>O(1)</code>
+**Time complexity:**  <code>O(n)</code>  
+**Space complexity:** <code>O(1)</code>  
 
 **C++**
 ```C++
