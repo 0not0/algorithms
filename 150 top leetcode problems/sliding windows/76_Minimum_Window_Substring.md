@@ -61,8 +61,7 @@ class Solution
       int need[128] = {};
 
       for(char c : t) need[c]++;
-       
-
+      
       int left = 0;
       int required = t.size();
 
