@@ -1,4 +1,6 @@
-# [3471. Find the Largest Almost Missing Integer](https://leetcode.com/problems/find-the-largest-almost-missing-integer/)
+# [3471. Find the Largest Almost Missing Integer](https://leetcode.com/problems/find-the-largest-almost-missing-integer/) 
+
+<code>Easy</code> level
 
 You are given an integer array <code>nums</code> and an integer <code>k</code>.
 
