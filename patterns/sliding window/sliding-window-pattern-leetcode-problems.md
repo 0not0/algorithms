@@ -23,6 +23,45 @@ Most common LeetCode problems for Sliding Window pattern:
 [2958. Length of Longest Subarray With at Most K Frequency](https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency)  
 [3090. Maximum Length Substring With Two Occurrences](https://leetcode.com/problems/maximum-length-substring-with-two-occurrences)  
 
+This pattern can be divided into several variations:   
+* fixed-size window  
+* variable-size window  
+* variable-size window + frequency map  
+
+**Fixed-size window:**  
+[438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string) 
+[567. Permutation in String](https://leetcode.com/problems/permutation-in-string)   
+[1456. Maximum Number of Vowels in a Substring of Given Length](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length)  
+[2461. Maximum Sum of Distinct Subarrays With Length K](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k)  
+
+**Variable-size window:**  
+[209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum)  
+[713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k)  
+[1004. Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii)  
+[1208. Get Equal Substrings Within Budget](https://leetcode.com/problems/get-equal-substrings-within-budget)  
+[1493. Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element)  
+[2024. Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam)  
+[2730. Find the Longest Semi-Repetitive Substring](https://leetcode.com/problems/find-the-longest-semi-repetitive-substring)  
+
+**Variable-size window + frequency map:**  
+[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)  
+[76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring) 
+[424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement)   
+[904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets)  
+[992. Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers)  
+[1358. Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters)  
+[2958. Length of Longest Subarray With at Most K Frequency](https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency)  
+[3090. Maximum Length Substring With Two Occurrences](https://leetcode.com/problems/maximum-length-substring-with-two-occurrences) 
+
+**Note:** Some of these variations overlap, so certain problems may belong to more than one category:  
+
+[438](https://leetcode.com/problems/find-all-anagrams-in-a-string) , [567](https://leetcode.com/problems/permutation-in-string) - fixed-size window + frequency map 
+
+[3](https://leetcode.com/problems/longest-substring-without-repeating-characters) , [76](https://leetcode.com/problems/minimum-window-substring) , [424](https://leetcode.com/problems/longest-repeating-character-replacement) , [904](https://leetcode.com/problems/fruit-into-baskets), [992](https://leetcode.com/problems/subarrays-with-k-different-integers), [2958](https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency), [3090](https://leetcode.com/problems/maximum-length-substring-with-two-occurrences) - variable-size window + frequency map  
+
+***Advanced problem:***   
+[30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words) - variable-size window + frequency map + fixed-size tokens + offsets 
+
 ***Must-solve problems for practicing this pattern:***  
 [3](https://leetcode.com/problems/longest-substring-without-repeating-characters)  longest valid window,  
 [30](https://leetcode.com/problems/substring-with-concatenation-of-all-words)  Sliding Window over tokens + offsets,   
