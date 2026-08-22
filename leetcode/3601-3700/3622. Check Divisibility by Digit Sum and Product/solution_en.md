@@ -42,7 +42,7 @@ Since 23 is not divisible by the sum (2 + 3 = 5) plus product (2 * 3 = 6) of its
 
 ### Solution
 
-**Time complexity:** <code>O(logn)</code>  
+**Time complexity:** <code>O(log n)</code>  
 **Space complexity:** <code>O(1)</code>  
 
 **C++**
@@ -66,5 +66,23 @@ class Solution
 
       return n % (sum + product) == 0;
     }
+};
+```
+
+**JS**
+```JS
+var checkDivisibility = function(n) {
+  let i = n;
+  let sum = 0;
+  let product = 1;
+
+  while(i) {
+      const d = i % 10;
+      sum +=d;
+      product *= d;
+      i = Math.floor(i / 10);
+  }
+
+  return n % (sum + product) === 0;
 };
 ```
