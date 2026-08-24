@@ -7,7 +7,7 @@
 ### Algorithms and Everything Around Them
 
 This repository was created to store everything related to algorithms and data structures, including coding interview preparation, self-study materials, and real-world implementations. It serves my personal collection of algorithms, data structures, coding interview solutions, and study notes.   
-C++ is the main language, but I’m gradually adding solutions in JavaScript, TypeScript, Java, Python, and Rust.
+C++ is the main language, but I'm gradually adding solutions in JavaScript, TypeScript, Java, Python, and Rust.
 
 [leetcode section](leetcode/leetcode.md)  
 This section contains LeetCode solutions in order, starting with problem one and continuing toward the latest problems.
