@@ -4,7 +4,7 @@
 
 ### Solution
 
-**Time complexity:** <code>O(log n)</code>  
+**Time complexity:** <code>O(n)</code>  
 **Space complexity:** <code>O(1)</code>  
 
 **C++**
