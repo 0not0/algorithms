@@ -10,7 +10,7 @@ This repository was created to store everything related to algorithms and data s
 C++ is the main language, but I’m gradually adding solutions in JavaScript, TypeScript, Java, Python, and Rust.
 
 [leetcode section](leetcode/leetcode.md)  
-This section contains LeetCode solutions in order, starting with problem N1 and continuing toward the latest problems.
+This section contains LeetCode solutions in order, starting with problem one and continuing toward the latest problems.
 
 [150 top leetcode problems](150-top-leetcode-problems/150_leetcode_problems)  
 This section contains [150 top LeetCode problems](https://leetcode.com/studyplan/top-interview-150) selected for fast coding interview preparation. According to the LeetCode, the list covers the most important algorithmic patterns, data structures, and problem-solving techniques, helping you practice essential coding problems and prepare for technical interviews in a limited amount of time.
