@@ -68,3 +68,72 @@ The subarray with only one element is a palindrome. Therefore, the answer is 100
 * <code>1 <= nums.length <= 10<sup>5</sup></code>
 * <code>1 <= nums[i] <= 10​​​​​​<sup>​9</sup></code>
 
+<br />
+
+***  
+
+### Solution
+
+**Time complexity:** <code>O(n)</code>  
+**Space complexity:** <code>O(n)</code>  
+
+**C++**
+```C++
+class Solution 
+{
+  public:
+    long long getSum(vector<int>& nums)
+    {
+      int n = nums.size();
+      vector<long long> prefix(n + 1);
+
+      for(int i = 0; i < n; i++) prefix[i + 1] = prefix[i] + nums[i];
+
+      auto rangeSum = [&](int l, int r)
+      {
+        return prefix[r + 1] - prefix[l];
+      };
+
+      long long ans = 0;
+
+      vector<int> odd(n);
+
+      for(int i = 0, l = 0, r = -1; i < n; i++)
+      {
+        int k = i > r ? 1 : min(odd[l + r - i], r - i + 1);
+
+        while(i - k >= 0 && i + k < n && nums[i - k] == nums[i + k]) k++;
+
+        odd[i] = k;
+        ans = max(ans, rangeSum(i - k + 1, i + k - 1));
+
+        if(i + k - 1 > r)
+        {
+          l = i - k + 1;
+          r = i + k - 1;
+        }
+      }
+
+      vector<int> even(n);
+
+      for(int i = 0, l = 0, r = -1; i < n; i++)
+      {
+        int k = i > r ? 0 : min(even[l + r - i + 1], r - i + 1);
+
+        while(i - k - 1 >= 0 && i + k < n && nums[i - k - 1] == nums[i + k]) k++;
+
+        even[i] = k;
+
+        if(k > 0) ans = max(ans, rangeSum(i - k, i + k - 1));
+
+        if(i + k - 1 > r)
+        {
+          l = i - k;
+          r = i + k - 1;
+        }
+      }
+
+      return ans;
+    }
+};
+```
