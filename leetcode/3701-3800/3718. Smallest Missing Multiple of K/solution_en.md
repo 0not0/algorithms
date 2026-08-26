@@ -1,4 +1,4 @@
-# [3718. Smallest Missing Multiple of K]()
+# [3718. Smallest Missing Multiple of K](https://leetcode.com/problems/smallest-missing-multiple-of-k)
 
 <code>Easy</code> level  
 
