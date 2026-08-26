@@ -3,9 +3,11 @@
 ### [3718. Smallest Missing Multiple of K](https://leetcode.com/problems/smallest-missing-multiple-of-k)
 
 <code>Easy</code> level  
-Three solutions with different runtimes.
 
-**First solution**  
+Very often, a LeetCode problem has several solutions, and you need to choose the best one or describe the pros and cons of each solution.  
+This problem has at at least three solutions with different runtimes.
+
+### First solution 
 
 **Time complexity:** <code>O(n)</code>  
 **Space complexity:** <code>O(1)</code> 
@@ -29,7 +31,7 @@ class Solution
 };
 ```
 
-**Second solution**
+### Second solution
 
 **Time complexity:** <code>O(n)</code>  
 **Space complexity:** <code>O(n)</code> 
@@ -47,7 +49,7 @@ class Solution
 };
 ```
 
-**Third solution**
+### Third solution
 
 **Time complexity:** <code>O(n)</code>  
 **Space complexity:** <code>O(1)</code> 
