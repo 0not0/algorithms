@@ -45,7 +45,6 @@ class Solution
           lexicographical_compare(s.begin() + left, s.begin() + right + 1, s.begin() + bLeft, s.begin() + bLeft + bLen))
         )
         {
-
           bLen = len;
           bLeft = left;
         }
