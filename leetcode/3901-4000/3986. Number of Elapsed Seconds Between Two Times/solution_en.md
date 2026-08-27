@@ -36,3 +36,30 @@ Return the number of seconds that have elapsed from <code>startTime</code> to <c
 * <code>00 <= SS <= 59</code>
 * <code>endTime</code> is not earlier than <code>startTime</code> 
 
+<br />
+
+***  
+
+### Solution
+
+**Time complexity:** <code>O(1)</code>  
+**Space complexity:** <code>O(1)</code>  
+
+**C++**
+```C++
+class Solution
+{
+  public:
+    int secondsBetweenTimes(string startTime, string endTime)
+    {
+      auto seconds = [](const string& t)
+      {
+        return ((t[0] - '0') * 10 + t[1] - '0') * 3600
+            + ((t[3] - '0') * 10 + t[4] - '0') * 60
+            + ((t[6] - '0') * 10 + t[7] - '0');
+      };
+
+      return seconds(endTime) - seconds(startTime);
+    }
+};
+```
