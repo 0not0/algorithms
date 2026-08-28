@@ -130,3 +130,66 @@ class Solution
     }
 };
 ```
+
+**JavaScript**
+```JS
+var findSubstring = function(s, words) {
+  const n = s.length;
+  const wordsCount = words.length;
+  const wordLength = words[0].length;
+
+  const required = new Map();
+
+  for(const word of words) {
+    required.set(word, (required.get(word) || 0) + 1);
+  }
+
+  const result = [];
+
+  for(let offset = 0; offset < wordLength; offset++) {
+    let left = offset;
+    let right = offset;
+    let currentWords = 0;
+
+    const window = new Map();
+
+    while(right + wordLength <= n) {
+      const word = s.slice(right, right + wordLength);
+      right += wordLength;
+
+      if(!required.has(word)) {
+        window.clear();
+        currentWords = 0;
+        left = right;
+
+        continue;
+      }
+
+      window.set(word, (window.get(word) || 0) + 1);
+      currentWords++;
+
+      while(window.get(word) > required.get(word)) {
+        const leftWord = s.slice(left, left + wordLength);
+
+        window.set(leftWord, window.get(leftWord) - 1);
+        currentWords--;
+
+        left += wordLength;
+      }
+
+      if(currentWords === wordsCount) {
+        result.push(left);
+
+        const leftWord = s.slice(left, left + wordLength);
+
+        window.set(leftWord, window.get(leftWord) - 1);
+        currentWords--;
+
+        left += wordLength;
+      }
+    }
+  }
+
+  return result;
+};
+```
