@@ -99,3 +99,45 @@ class Solution
     }
 };
 ```
+
+**JavaScript**
+```JS
+var minWindow = function(s, t) {
+  const need = new Array(128).fill(0);
+
+  for(const c of t) need[c.charCodeAt(0)]++;
+
+  let left = 0;
+  let required = t.length;
+
+  let minStart = 0;
+  let minLength = Infinity;
+
+  for(let right = 0; right < s.length; right++) {
+    const code = s.charCodeAt(right);
+
+    if(need[code] > 0) required--;
+
+    need[code]--;
+
+    while(required === 0) {
+      const length = right - left + 1;
+
+      if(length < minLength) {
+        minLength = length;
+        minStart = left;
+      }
+
+      const leftCode = s.charCodeAt(left);
+
+      need[leftCode]++;
+
+      if(need[leftCode] > 0) required++;
+
+      left++;
+    }
+  }
+
+  return minLength === Infinity ? "" : s.slice(minStart, minStart + minLength);
+};
+```
