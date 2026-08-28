@@ -74,3 +74,23 @@ class Solution
     }
 };
 ```
+
+**JavaScript**
+```JS
+var minSubArrayLen = function(target, nums) {
+  const n = nums.length;
+  let sum = 0;
+  let minLength = n + 1;
+
+  for(let end = 0, start = 0; end < n; end++) {
+    sum += nums[end];
+
+    while(sum >= target) {
+      minLength = Math.min(minLength, end - start + 1);
+      sum -= nums[start++];
+    }
+  }
+
+  return minLength <= n ? minLength : 0;
+};
+```
