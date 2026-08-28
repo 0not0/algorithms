@@ -6,6 +6,8 @@ Given two strings <code>s</code> and <code>t</code> of lengths <code>m</code> an
 
 The testcases will be generated such that the answer is **unique**.  
 
+**1.** A **substring** is a contiguous **non-empty** sequence of characters within a string.
+
 <br />
 
 **Example 1:**
