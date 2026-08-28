@@ -74,3 +74,25 @@ class Solution
     }
 };
 ```
+
+**JavaScript**
+```JS
+var lengthOfLongestSubstring = function(s) {
+  const last = new Array(256).fill(-1);
+
+  let left = 0;
+  let ans = 0;
+
+  for(let right = 0; right < s.length; right++) {
+    const c = s.charCodeAt(right);
+
+    left = Math.max(left, last[c] + 1);
+
+    last[c] = right;
+
+    ans = Math.max(ans, right - left + 1);
+  }
+
+  return ans;
+};
+```
