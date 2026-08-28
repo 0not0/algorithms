@@ -2,6 +2,65 @@
 
 <code>Hard</code> level  
 
+You are given two strings <code>s</code> and <code>target</code>, each of length <code>n</code>, consisting of lowercase English letters.
+
+Return the **lexicographically smallest**<sup>1</sup> **string** that is **both** a **palindromic permutation**<sup>2</sup> of <code>s</code> and **strictly** greater than <code>target</code>. If no such permutation exists, return an empty string.  
+
+**1.** - A string <code>a</code> is **lexicographically smaller** than a string <code>b</code> if in the first position where <code>a</code> and <code>b</code> differ, string <code>a</code> has a letter that appears earlier in the alphabet than the corresponding letter in <code>b</code>.  
+If the first <code>min(a.length, b.length)</code> characters do not differ, then the shorter string is the lexicographically smaller one.   
+
+**2.** - A **palindrome** is a string that reads the same forward and backward.  
+
+<br />
+
+**Example 1:**
+<pre>
+Input: s = "baba", target = "abba"
+Output: "baab"
+</pre>
+**Explanation:**
+
+* The palindromic permutations of <code>s</code> (in lexicographical order) are <code>"abba"</code> and <code>"baab"</code>.
+* The lexicographically smallest permutation that is strictly greater than <code>target</code> is <code>"baab"</code>.
+
+**Example 2:**
+<pre>
+Input: s = "baba", target = "bbaa"
+Output: ""
+</pre>
+**Explanation:**
+
+* The palindromic permutations of <code>s</code> (in lexicographical order) are <code>"abba"</code> and <code>"baab"</code>.
+* None of them is lexicographically strictly greater than <code>target</code>. Therefore, the answer is <code>""</code>.
+
+**Example 3:**
+<pre>
+Input: s = "abc", target = "abb"
+Output: ""
+</pre>
+**Explanation:**
+
+<code>s</code> has no palindromic permutations. Therefore, the answer is <code>""</code>.
+
+**Example 4:**
+<pre>
+Input: s = "aac", target = "abb"
+Output: "aca"
+</pre>
+**Explanation:**
+
+* The only palindromic permutation of <code>s</code> is <code>"aca"</code>.
+* <code>"aca"</code> is strictly greater than target. Therefore, the answer is <code>"aca"</code>.
+
+<br />
+
+**Constraints:**
+
+* <code>1 <= n == s.length == target.length <= 300</code>
+* <code>s</code> and <code>target</code> consist of only lowercase English letters.
+
+<br />
+
 ***  
 
 ### Solution
