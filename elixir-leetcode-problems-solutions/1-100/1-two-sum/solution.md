@@ -1,4 +1,6 @@
-# [1. Two Sum](https://leetcode.com/problems/two-sum)  
+# [1. Two Sum](https://leetcode.com/problems/two-sum)   
+
+`Easy level`
 
 **Time complexity:** `O(n)`  
 **Space complexity:** `O(n)`

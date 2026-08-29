@@ -1,4 +1,6 @@
-# [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers)
+# [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers) 
+
+`Medium level`
 
 **Time complexity:** `O(max(n, m))`  
 **Space complexity:** `O(max(n, m))`  
