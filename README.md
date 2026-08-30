@@ -2,7 +2,7 @@
 
 Цей репозиторій створений для зберігання всього, що так чи інакше пов'язано з алгоритмами, структурами даних та їх використанням для проходження інтерв'ю, самопідготовці або застосуванням у реальному житті.  
 
-Англійська версія [https://algobytes.net/](https://algobytes.net/) зараз готується і скоро буде доступна. 
+Більш детально можна прочитати на моєму сайті [https://algobytes.net/](https://algobytes.net/). 
 
 ### Algorithms and Everything Around Them
 
@@ -28,4 +28,4 @@ Include the most important coding interview patterns with curated lists of LeetC
 This section contains my thoughts on solving specific coding problems, exploring different solutions and different problem-solving approaches, algorithms, and coding interview preparation.  
 
 
-**More deeper read on my site** [https://algobytes.net/](https://algobytes.net/). **The site is under development and will be ready soon**.  
+**More deeper read on my site** [https://algobytes.net/](https://algobytes.net/).
