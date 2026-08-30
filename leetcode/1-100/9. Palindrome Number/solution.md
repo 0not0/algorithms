@@ -1,4 +1,4 @@
-# [9. Palindrome Number]()  
+# [9. Palindrome Number](https://leetcode.com/problems/palindrome-number)  
 
 `Easy` level  
 
