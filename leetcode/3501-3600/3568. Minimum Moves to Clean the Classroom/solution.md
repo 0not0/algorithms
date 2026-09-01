@@ -142,7 +142,8 @@ public:
 
         if(currEnergy == 0) continue;
 
-        for(int i = 0; i < 4; i++) {
+        for(int i = 0; i < 4; i++)
+        {
           int nr = row + dirs[i];
           int nc = col + dirs[i + 1];
 
