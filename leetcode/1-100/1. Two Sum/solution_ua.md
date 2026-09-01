@@ -86,14 +86,17 @@ public:
   vector<int> twoSum(vector<int>& nums, int target) {
     std::unordered_map<int, int> map;
   
-    for (int i = 0; i < nums.size(); i++) {
+    for(int i = 0; i < nums.size(); i++) 
+    {
       int val = target - nums.at(i);
           
       auto it = map.find(val);
           
-      if (it != map.end()) {
+      if(it != map.end())
+      {
           return {it->second, i};
-      } else {
+      } else
+      {
           map[nums[i]] = i;
       }
     }
@@ -101,4 +104,150 @@ public:
     return {};
   }
 };
-```  
+```
+**C**  
+```c
+#define HASH_SIZE 20011
+
+typedef struct {
+  int key;
+  int index;
+  int used;
+} Entry;
+
+int hash(int key) {
+  unsigned int x = (unsigned int)key;
+  return x % HASH_SIZE;
+}
+
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+  Entry table[HASH_SIZE] = {0};
+
+  for(int i = 0; i < numsSize; i++) {
+    int complement = target - nums[i];
+    int h = hash(complement);
+
+    while(table[h].used) {
+      if(table[h].key == complement) {
+        int* result = malloc(2 * sizeof(int));
+
+        result[0] = table[h].index;
+        result[1] = i;
+
+        *returnSize = 2;
+        return result;
+      }
+
+      h = (h + 1) % HASH_SIZE;
+    }
+
+    h = hash(nums[i]);
+
+    while(table[h].used) {
+        h = (h + 1) % HASH_SIZE;
+    }
+
+    table[h].key = nums[i];
+    table[h].index = i;
+    table[h].used = 1;
+  }
+
+  *returnSize = 0;
+
+  return NULL;
+}
+```
+
+**Java**
+```java
+class Solution {
+  public int[] twoSum(int[] nums, int target) {
+    Map<Integer, Integer> map = new HashMap<>();
+
+    for(int i = 0; i < nums.length; i++) {
+      int val = target - nums[i];
+
+      Integer index = map.get(val);
+
+      if(index != null) return new int[]{index, i};
+
+      map.put(nums[i], i);
+    }
+
+    return new int[]{};
+  }
+}
+```
+
+**Python3**
+```python
+class Solution:
+  def twoSum(self, nums: List[int], target: int) -> List[int]:
+    seen = {}
+
+    for i, num in enumerate(nums):
+        val = target - num
+
+        if val in seen:
+          return [seen[val], i]
+
+        seen[num] = i
+
+    return []
+```
+
+**JavaScript**
+```javascript
+var twoSum = function(nums, target) {
+  const map = new Map();
+
+  for(let i = 0; i < nums.length; i++) {
+    const val = target - nums[i];
+
+    if(map.has(val)) return [map.get(val), i];
+
+    map.set(nums[i], i);
+  }
+
+  return [];
+};
+```
+
+**TypeScript**
+```typescript
+function twoSum(nums: number[], target: number): number[] {
+    const map = new Map<number, number>();
+
+  for(let i = 0; i < nums.length; i++) {
+    const val = target - nums[i];
+
+    if(map.has(val)) return [map.get(val)!, i];
+
+    map.set(nums[i], i);
+  }
+
+  return [];
+};
+```
+
+**C#**
+```c#
+public class Solution
+{
+  public int[] TwoSum(int[] nums, int target)
+  {
+    var map = new Dictionary<int, int>();
+
+    for(int i = 0; i < nums.Length; i++)
+    {
+      int val = target - nums[i];
+
+      if(map.TryGetValue(val, out int index)) return new int[] { index, i };
+      
+      map[nums[i]] = i;
+    }
+
+    return Array.Empty<int>();
+  }
+}
+```
