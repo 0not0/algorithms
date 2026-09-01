@@ -49,6 +49,7 @@ Return the **k-th** **lexicographically smallest** palindromic **permutation** o
 * <code>s</code> consists of lowercase English letters.
 * <code>s</code> is guaranteed to be palindromic.
 * <code>1 <= k <= 10<sup>6</sup></code>  
+
 <br />
 
 ***
