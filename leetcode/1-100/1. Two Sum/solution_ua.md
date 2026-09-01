@@ -196,23 +196,6 @@ class Solution:
     return []
 ```
 
-**JavaScript**
-```javascript
-var twoSum = function(nums, target) {
-  const map = new Map();
-
-  for(let i = 0; i < nums.length; i++) {
-    const val = target - nums[i];
-
-    if(map.has(val)) return [map.get(val), i];
-
-    map.set(nums[i], i);
-  }
-
-  return [];
-};
-```
-
 **TypeScript**
 ```typescript
 function twoSum(nums: number[], target: number): number[] {
@@ -248,6 +231,181 @@ public class Solution
     }
 
     return Array.Empty<int>();
+  }
+}
+```
+
+**Go**
+```go
+func twoSum(nums []int, target int) []int {
+  seen := make(map[int]int)
+
+  for i, num := range nums {
+    val := target - num
+
+    if index, ok := seen[val]; ok {
+      return []int{index, i}
+    }
+
+    seen[num] = i
+  }
+
+  return []int{}
+}
+```
+
+**Kotlin**
+```kotlin
+class Solution {
+  fun twoSum(nums: IntArray, target: Int): IntArray {
+    val map = HashMap<Int, Int>()
+
+    for (i in nums.indices) {
+      val value = target - nums[i]
+
+      if (map.containsKey(value)) {
+        return intArrayOf(map[value]!!, i)
+      }
+
+      map[nums[i]] = i
+    }
+
+    return intArrayOf()
+  }
+}
+```
+
+**Swift**
+```swift
+class Solution {
+  func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    var map = [Int: Int]()
+
+    for i in 0..<nums.count {
+      let value = target - nums[i]
+
+      if let index = map[value] {
+        return [index, i]
+      }
+
+      map[nums[i]] = i
+    }
+
+    return []
+  }
+}
+```
+
+**Rust**
+```rust
+use std::collections::HashMap;
+
+impl Solution {
+  pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
+    let mut map = HashMap::new();
+
+    for (i, &num) in nums.iter().enumerate() {
+      let value = target - num;
+
+      if let Some(&index) = map.get(&value) {
+          return vec![index as i32, i as i32];
+      }
+
+      map.insert(num, i);
+    }
+
+    vec![]
+  }
+}
+```
+
+**Ruby**
+```ruby
+def two_sum(nums, target)
+  map = {}
+
+  nums.each_with_index do |num, i|
+    value = target - num
+
+    if map.key?(value)
+      return [map[value], i]
+    end
+
+    map[num] = i
+  end
+
+  []
+end
+```
+
+**PHP**
+```php
+class Solution
+{
+  function twoSum($nums, $target)
+  {
+    $map = [];
+
+    foreach ($nums as $i => $num) {
+      $value = $target - $num;
+
+      if (array_key_exists($value, $map)) {
+        return [$map[$value], $i];
+      }
+
+      $map[$num] = $i;
+    }
+
+    return [];
+  }
+}
+```
+
+**Dart**
+```dart
+class Solution {
+  List<int> twoSum(List<int> nums, int target) {
+    final Map<int, int> map = {};
+
+    for (int i = 0; i < nums.length; i++) {
+      final int value = target - nums[i];
+
+      if (map.containsKey(value)) {
+        return [map[value]!, i];
+      }
+
+      map[nums[i]] = i;
+    }
+
+    return [];
+  }
+}
+```
+
+**Scala**
+```scala
+import scala.collection.mutable
+
+object Solution {
+  def twoSum(nums: Array[Int], target: Int): Array[Int] = {
+    val map = mutable.HashMap[Int, Int]()
+    var i = 0
+
+    while (i < nums.length) {
+      val value = target - nums(i)
+
+      map.get(value) match {
+        case Some(index) =>
+          return Array(index, i)
+
+        case None =>
+          map(nums(i)) = i
+      }
+
+      i += 1
+    }
+
+    Array()
   }
 }
 ```
