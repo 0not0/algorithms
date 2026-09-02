@@ -1,9 +1,3 @@
-### Алгоритми і все, що з ними пов'язано
-
-Цей репозиторій створений для зберігання всього, що так чи інакше пов'язано з алгоритмами, структурами даних та їх використанням для проходження інтерв'ю, самопідготовці або застосуванням у реальному житті.  
-
-Більш детально можна прочитати на моєму сайті [https://algobytes.net/](https://algobytes.net/). 
-
 ### Algorithms and Everything Around Them
 
 This repository was created to store everything related to algorithms and data structures, including coding interview preparation, self-study materials, and real-world implementations. It serves my personal collection of algorithms, data structures, coding interview solutions, and study notes.   
@@ -16,7 +10,10 @@ This section contains [150 top LeetCode problems](https://leetcode.com/studyplan
 This section includes solutions for all LeetCode problems starting from 1, using different languages: C++, C, JavaScript, TypeScript, Java, Python, Ruby, Rust, C#, Go, Dart, Scala, Erlang. I'm filling in this section step by step. 
 
 [Elixir LeetCode problems solutions](/elixir-leetcode-problems-solutions/elixir.md)  
-Here, I'm trying to solve LeetCode problems using Elixir.
+Here, I'm trying to solve LeetCode problems using Elixir.  
+
+[Erlang LeetCode problems solutions](/erlang-leetcode-problems-solutions/erlang.md)  
+Here, I'm trying to solve LeetCode problems using Erlang.  
 
 [data structures section](data-structures/data-structures.md)  
 This section covers the most important data structures with a focus on recognizing when, why and how to choose the right one for a specific problem in real-world code and coding problems.
