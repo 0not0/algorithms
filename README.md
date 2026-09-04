@@ -1,4 +1,4 @@
-### Algorithms and Everything Around Them
+### Algorithms and everything around them
 
 This repository was created to store everything related to algorithms and data structures, including coding interview preparation, self-study materials, and real-world implementations. It serves my personal collection of algorithms, data structures, coding interview solutions, and study notes.   
 C++ is the main language, but I'm gradually adding solutions in C, JavaScript, TypeScript, Java, Python, Ruby, Rust, C#, Go, Dart, Scala, and Erlang.
