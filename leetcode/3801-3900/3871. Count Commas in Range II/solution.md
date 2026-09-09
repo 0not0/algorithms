@@ -64,3 +64,59 @@ public:
   }
 };
 ```
+
+**Java**
+
+```java
+class Solution {
+  public long countCommas(long n) {
+    long result = 0;
+
+    for(long start = 1000; start <= n; start *= 1000)
+      result += n - start + 1;
+
+    return result;
+  }
+}
+```
+
+**JavaScript**
+
+```javascript
+var countCommas = function(n) {
+  let result = 0;
+
+  for(let start = 1000; start <= n; start *= 1000)
+    result += n - start + 1;
+
+  return result;
+};
+```
+
+**TypeScript**
+
+```typescript
+function countCommas(n: number): number {
+  let result = 0;
+
+  for(let start = 1000; start <= n; start *= 1000)
+    result += n - start + 1;
+
+  return result;
+};
+```
+
+**Python**
+
+```python
+class Solution:
+  def countCommas(self, n: int) -> int:
+    result = 0
+    start = 1000
+
+    while start <= n:
+      result += n - start + 1
+      start *= 1000
+
+    return result
+```
