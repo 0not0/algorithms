@@ -13,7 +13,7 @@ Given the `root` of a binary tree, return *the number of nodes where the value o
 
 ![2265 example 1 image](../../../images/problems/2265/2265-example-1-img.png)  
 <pre>
-<strong>Input:</strong> root = [4,8,5,0,1,null,6]
+<strong>Input:</strong> root = [4, 8, 5, 0, 1, null, 6]
 <strong>Output:</strong> 5
 <strong>Explanation:</strong> 
 For the node with value 4: The average of its subtree is (4 + 8 + 5 + 0 + 1 + 6) / 6 = 24 / 6 = 4.
@@ -23,7 +23,7 @@ For the node with value 1: The average of its subtree is 1 / 1 = 1.
 For the node with value 6: The average of its subtree is 6 / 1 = 6.
 </pre>
 
-**Exxample 2:**
+**Example 2:**
 
 ![2265 example 2 image](../../../images/problems/2265/2265-example-2-img.png) 
 <pre>
