@@ -11,6 +11,7 @@ This section includes solutions for all LeetCode problems starting from 1, using
 
 [Elixir LeetCode problems solutions](/elixir-leetcode-problems-solutions/elixir.md)  
 Here, I'm trying to solve LeetCode problems using Elixir.  
+You can find many more solutions with explanations and additional materials [here](https://algobytes.net/elixir/).
 
 [Erlang LeetCode problems solutions](/erlang-leetcode-problems-solutions/erlang.md)  
 Here, I'm trying to solve LeetCode problems using Erlang.  
