@@ -2,6 +2,8 @@
 
 `Easy level`
 
+For a detailed analysis of the **C++** or **Java** ***imperative*** solution and the **Elixir** ***functional*** solution, see [here](https://algobytes.net/leetcode-1-elixir-solution/)
+
 **Time complexity:** `O(n)`  
 **Space complexity:** `O(n)`
 
