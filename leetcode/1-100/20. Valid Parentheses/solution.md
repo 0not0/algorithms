@@ -60,7 +60,7 @@ An input string is valid if:
 ### Solution
 
 <div style="border: 2px solid grey; border-radius: 8px; padding: 10px; font-size: 20px;">
-  <a>For a deep-dive explanation of the solution with a step-by-step example, see here</a>
+  <a href="https://algobytes.net/blog/leetcode-20-solution/" target="_blank">For a deep-dive explanation of the solution with a step-by-step example, see here</a>
 </div>
 
 <br />
